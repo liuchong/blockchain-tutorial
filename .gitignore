@@ -1,0 +1,11 @@
+# Rust
+/target
+**/*.rs.bk
+
+# Temporary files
+tmp
+*~
+.*~
+.#*
+.DS_Store
+nohup.out

@@ -1,0 +1,19 @@
+language: rust
+
+cache: cargo
+
+rust:
+  - stable
+  - beta
+  - nightly
+
+before_script:
+   - >
+     rustup component add clippy ||
+     cargo install --git https://github.com/rust-lang/rust-clippy/ --force clippy
+   - cargo install cargo-x --force
+
+script:
+  - cargo x lint
+  - cargo x test
+  - cargo x build
